@@ -1,0 +1,1159 @@
+body {
+  margin: 0;
+  padding: 0;
+}
+
+::-webkit-scrollbar {
+    width: 0px
+}
+
+.navContainer {
+    width: 100%;
+    height: 46px;
+    display: flex;
+    /* align-items: center; */
+    /* justify-content: space-around; */
+    background: rgba(255, 255, 255, 0.61);
+    position: sticky;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+.navbar {
+  width: 100%;
+  display: flex;
+  position: sticky;
+  align-items: center;
+}
+
+.menuWrapper {
+  cursor: pointer;
+  width: 26px;
+  height: 20px;
+  padding-left: 14px;
+}
+
+.menuBtn, .menuBtn:after, .menuBtn:before {
+   width: 26px;
+   height: 3.33px;
+   background: #000000;
+   border-radius: 10px;
+}
+
+
+.menuBtn:after, .menuBtn:before {
+   content: "";
+   position: absolute;
+ }
+
+.menuBtn:after {
+    transform: translateY(200%);
+}
+
+.menuBtn:before {
+    transform: translateY(450%);
+}
+
+ul {
+    display: flex;
+    align-items: center;
+    margin-left:  calc(50% - 114px);
+}
+
+ul li {
+    list-style-type: none;
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 17px;
+    line-height: 20px;
+    color: #212121;
+}
+
+ul li div {
+   width: 74px;
+   height: 40px;
+   background-image: url('../images/logo.svg');
+}
+
+ul li a {
+    display: none;
+    cursor: pointer
+}
+
+ul li a:hover{
+  color: #1E9EC3;
+  text-decoration: underline
+}
+
+/* burger menu for mobile */
+.navContainer.navContainerOpen{
+  width: 100%;
+  height: 586px;
+  background: rgba(33, 33, 33, 0.69);
+  position: absolute;
+  z-index: 10000;
+}
+.navbar.navOpen {
+    width: 222px;
+    height: 586px;
+    display: block;
+    background: #212121;
+ }
+
+ .menuItems.menuItemsOpen {
+    display: block;
+    margin-left: -22px;
+}
+
+.menuItems.menuItemsOpen li a{
+    color: #FFFFFF;
+    display: block;
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 21px;
+    margin-top: 20px
+}
+
+ul.menuItemsOpen li div {
+   display: none;
+}
+.menuWrapper.menuBtnOpen  {
+    padding-top: 32px
+}
+.menuWrapper.menuBtnOpen .menuBtn {
+    background: #FFFFFF;
+}
+
+.menuWrapper.menuBtnOpen .menuBtn:after {
+    background: #FFFFFF;
+}
+
+.menuWrapper.menuBtnOpen .menuBtn:before {
+    background: #FFFFFF;
+}
+
+.mainContainer {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.main {
+    width: 100%;
+    height: 269px;
+    position: relative;
+    z-index: -1000000;
+    background-image: url('../images/main_xs.svg');
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.bodyContainer {
+    width: 100%;
+    position: relative
+}
+.servicesWrapper {
+   width: 100%;
+   background-color: #212121;
+   height: 254px;
+   display: flex;
+   justify-content: center;
+   z-index: -100
+}
+
+.services {
+    width: 92.5%;
+}
+
+.title {
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 21px;
+    color: #FFFFFF;
+    text-align: center;
+}
+
+.servicesItems {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap
+}
+
+.servicesItems div:nth-of-type(1) {
+    width: 50.6%;
+    height: 88px;
+    text-align: center;
+}
+
+.servicesItems div:nth-of-type(1) p {
+  margin-top: 5px;
+}
+
+.servicesItems div:nth-of-type(2) {
+    width: 44.9%;
+    height: 79px;
+    margin-left: 13px;
+    text-align: center;
+}
+
+.servicesItems div:nth-of-type(3) {
+    width: 24.3%;
+    height: 79px;
+    margin-top: 19px;
+    text-align: center;
+}
+
+.servicesItems div:nth-of-type(4) {
+    width: 17.2%;
+    height: 79px;
+    margin-left: 52px;
+    margin-top: 19px;
+    text-align: center;
+}
+
+.servicesItems div:nth-of-type(5) {
+    width: 19.5%;
+    height: 79px;
+    margin-left: 63px;
+    margin-top: 19px;
+    text-align: center;
+}
+
+.servicesText {
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 19px;
+    color: #FFFFFF
+}
+
+.img {
+  width: 100%;
+  position: absolute;
+  background: url('../images/background_xs.svg');
+  height: 482px;
+}
+
+.projectsWrapper {
+    width: 100%;
+    height: 200px;
+    margin-top: 31px;
+}
+
+.projects {
+    width: 100%;
+    margin: auto;
+    height: 208px;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.projectTitle {
+    display: flex;
+    align-items: center;
+    font-size: 20px;
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 700;
+}
+
+/* minerbox management */
+.projectsItemMinerManagement {
+    width: 100%
+}
+.projectTitleMinerManagement {
+    display: flex;
+    align-items: center;
+    font-size: 20px;
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 700;
+    margin-top: 10px;
+    margin-left: 10px;
+}
+
+.projectTitleMinerManagement:nth-of-type(1) span {
+    margin-left: 13px;
+    color:  #1E989B
+}
+
+.minerManagementProject div:nth-of-type(1) {
+    width: 100%;
+    height: 129px;
+    background-color: #FFFFFF;
+    background-image: url('../images/management_project.svg');
+    background-repeat: no-repeat;
+    margin-top: 14px;
+    background-size: contain
+}
+.minerManagementproject {
+  display: flex;
+  /* position: absolute; */
+}
+
+/* converter project */
+
+.projectTitleConverter {
+    display: flex;
+    align-items: center;
+    font-size: 20px;
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 700;
+    margin-top: 10px
+}
+
+.projectTitleConverter:nth-of-type(1) span {
+    margin-left: 13px;
+    color:  #94C4E9
+}
+
+.projectTitleConverter:nth-of-type(1) img {
+  width: 28px;
+  height: 28px
+}
+
+.converterProject div:nth-of-type(2) {
+    margin-left: 10px
+  }
+
+.converterProject div:nth-of-type(1) {
+    width: 166px;
+    height: 166px;
+    background-color: #FFFFFF;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+    border-radius: 20px;
+    background-image: url('../images/converter_project.svg');
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+    margin-top: 14px;
+    background-size: contain
+}
+.converterProject {
+  display: flex;
+  position: relative;
+}
+
+.converterProject div:nth-of-type(2) p {
+  width: 122px;
+  height: 114px;
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 19px;
+  text-align: left;
+  color: #212121;
+  overflow: hidden;
+}
+
+.converterProject div:nth-of-type(2) button {
+   width: 36px;
+   height: 36px;
+   background-color: #FFFFFF;
+   box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+   outline: none;
+   border-radius: 6px;
+   cursor: pointer;
+   border: none;
+}
+
+.converterProject div:nth-of-type(2) button:nth-of-type(1) {
+   background-image: url('../images/app_store.svg');
+   background-repeat: no-repeat;
+   background-position: 50% 50%;
+ }
+
+.converterProject div:nth-of-type(2) button:nth-of-type(2) {
+  margin-left: 14px;
+  background-image: url('../images/google_play.svg');
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+}
+
+/* playtime project */
+
+.projectTitlePlayTime {
+    display: flex;
+    align-items: center;
+    font-size: 20px;
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 700;
+    margin-top: 10px
+}
+
+.projectTitlePlayTime:nth-of-type(1) span {
+    margin-left: 13px;
+    color:  #503783
+}
+
+.playTimeProject div:nth-of-type(2) {
+    margin-left: 10px
+  }
+
+.playTimeProject div:nth-of-type(1) {
+    width: 166px;
+    height: 166px;
+    background-color: #FFFFFF;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+    border-radius: 20px;
+    background-image: url('../images/play_project.svg');
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+    margin-top: 14px;
+}
+.playTimeProject {
+  display: flex;
+  position: relative;
+}
+
+.playTimeProject div:nth-of-type(2) p {
+  width: 122px;
+  height: 114px;
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 19px;
+  text-align: left;
+  color: #212121;
+  overflow: hidden;
+}
+
+.playTimeProject div:nth-of-type(2) button {
+   width: 36px;
+   height: 36px;
+   background-color: #FFFFFF;
+   box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+   outline: none;
+   border-radius: 6px;
+   cursor: pointer;
+   border: none;
+}
+
+.playTimeProject div:nth-of-type(2) button:nth-of-type(1) {
+   background-image: url('../images/app_store.svg');
+   background-repeat: no-repeat;
+   background-position: 50% 50%;
+ }
+
+.playTimeProject div:nth-of-type(2) button:nth-of-type(2) {
+  margin-left: 14px;
+  background-image: url('../images/google_play.svg');
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+}
+
+/* math project */
+.projectTitleMath {
+    display: flex;
+    align-items: center;
+    font-size: 20px;
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 400;
+    margin-top: 10px
+}
+
+.projectTitleMath:nth-of-type(1) span {
+    margin-left: 13px;
+}
+
+.mathProject div:nth-of-type(2) {
+    margin-left: 10px
+  }
+
+.mathProject div:nth-of-type(1) {
+    width: 166px;
+    height: 166px;
+    background-color: #FFFFFF;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+    border-radius: 20px;
+    background-image: url('../images/math_project.svg');
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+    margin-top: 14px;
+}
+.mathProject {
+  display: flex;
+  position: relative;
+}
+
+.mathProject div:nth-of-type(2) p {
+  width: 122px;
+  height: 114px;
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 19px;
+  text-align: left;
+  color: #212121;
+  overflow: hidden;
+}
+
+.mathProject div:nth-of-type(2) button {
+   width: 36px;
+   height: 36px;
+   background-color: #FFFFFF;
+   box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+   outline: none;
+   border-radius: 6px;
+   cursor: pointer;
+   border: none;
+}
+
+.mathProject div:nth-of-type(2) button:nth-of-type(1) {
+   background-image: url('../images/app_store.svg');
+   background-repeat: no-repeat;
+   background-position: 50% 50%;
+ }
+
+.mathProject div:nth-of-type(2) button:nth-of-type(2) {
+  margin-left: 14px;
+  background-image: url('../images/google_play.svg');
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+}
+
+/* miner project */
+.projectsItem:nth-of-type(1) span {
+    margin-left: 13px;
+    color: #1E989B;
+}
+
+.minerProject div:nth-of-type(2) {
+    margin-left: 10px
+  }
+
+.minerProject div:nth-of-type(1) {
+     width: 166px;
+     height: 166px;
+     background-color: #FFFFFF;
+     box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+     border-radius: 20px;
+     background-image: url('../images/minerbox_project.svg');
+     background-repeat: no-repeat;
+     background-position: 50% 50%;
+     margin-top: 14px;
+}
+.minerProject {
+   display: flex;
+   position: relative;
+
+ }
+
+.minerProject div:nth-of-type(2) p {
+   width: 122px;
+   height: 114px;
+   font-family: 'Roboto';
+   font-style: normal;
+   font-weight: 400;
+   font-size: 16px;
+   line-height: 19px;
+   text-align: left;
+   color: #212121;
+   overflow: hidden;
+}
+
+.minerProject div:nth-of-type(2) button {
+    width: 36px;
+    height: 36px;
+    background-color: #FFFFFF;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+    outline: none;
+    border-radius: 6px;
+    cursor: pointer;
+    border: none;
+ }
+
+ .minerProject div:nth-of-type(2) button:nth-of-type(1) {
+    background-image: url('../images/app_store.svg');
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+  }
+
+ .minerProject div:nth-of-type(2) button:nth-of-type(2) {
+   margin-left: 14px;
+   background-image: url('../images/google_play.svg');
+   background-repeat: no-repeat;
+   background-position: 50% 50%;
+ }
+
+/* media queries */
+@media screen and (min-width: 320px) {
+    .newLine {
+      display: none
+    }
+    .minerProject div:nth-of-type(2) p:after {
+       content: 'MinerBox is a tool, that is designed for cryptocoin miners to make easy control ...'
+    }
+
+    .mathProject div:nth-of-type(2) p:after {
+        content: 'Drawing and coloring mobile application for kids and not only...'
+    }
+
+    .playTimeProject div:nth-of-type(2) p:after {
+        content: 'Drawing and coloring mobile application for kids and not only...'
+    }
+
+    .converterProject div:nth-of-type(2) p:after {
+        content: 'Drawing and coloring mobile application for kids and not only...'
+    }
+
+}
+@media screen and (min-width: 375px) {
+    .converterProject div:nth-of-type(2) p {
+        width: 166px;
+    }
+
+    .playTimeProject div:nth-of-type(2) p {
+        width: 166px;
+    }
+    .mathProject div:nth-of-type(2) p {
+        width: 166px;
+    }
+    .projects {
+        width: 100%;
+    }
+    .projectsItem {
+      width: 92.2%
+    }
+
+    .minerManagementProject div:nth-of-type(1) {
+        width: 100%;
+        height: 151px;
+        background-size: cover
+    }
+    .minerProject div:nth-of-type(2) p {
+        width: 166px;
+        height: 113px;
+    }
+    .minerProject div:nth-of-type(2) p:after {
+        content: 'MinerBox is a tool, that is designed for cryptocoin miners to make easy control and monitor of the mining process.'
+     }
+    .navContainer.navContainerOpen{
+        height: 812px;
+    }
+    .navbar.navOpen {
+        height: 812px;;
+     }
+    .main {
+        height: 356px;
+    }
+    .mainContainer {
+        height: 356px;
+    }
+    .servicesItems div:nth-of-type(1) {
+        margin-left: 24px;
+        width: 42.7%
+    }
+    .servicesItems div:nth-of-type(2) {
+        margin-left: 24px;
+        width: 37.8%
+    }
+    .servicesItems div:nth-of-type(3) {
+        width: 20.5%
+    }
+    .servicesItems div:nth-of-type(4) {
+        margin-left: 78px;
+        width: 14.5%
+    }
+    .servicesItems div:nth-of-type(5) {
+        margin-left: 83px;
+        width: 16.5%
+    }
+    .services {
+        width: 93.6%;
+    }
+}
+@media screen and (min-width: 744px) {
+    .newLine {
+        display: block
+      }
+    .projects {
+        width: 92%;
+        height: 309px
+    }
+
+    .projectsItem, .projectsItemMath, .projectsItemPlayTime, .projectsItemConverter {
+       width: 100%
+    }
+
+    .minerManagementProject div:nth-of-type(1) {
+        width: 100%;
+        height: 129px;
+        background-color: #FFFFFF;
+        background-image: url('../images/management_sm.svg');
+        background-repeat: no-repeat;
+        margin-top: 14px;
+        background-size: cover
+    }
+
+    .converterProject div:nth-of-type(1) {
+        width: 255px;
+        height: 255px;
+        background-image: url('../images/converter_project.svg');
+        background-size: ''
+    }
+
+    .converterProject div:nth-of-type(2) p {
+        width: 255px;
+        height: 109px;
+        font-size: 20px
+    }
+    .converterProject div:nth-of-type(2) button {
+        width: 126px;
+        height: 36px;
+        position: relative;
+    }
+    .converterProject div:nth-of-type(2) button:nth-of-type(1) {
+        margin-top: 24px;
+        background-position: 5% 50%;
+        background-size: 19.6px 20px
+    }
+    .converterProject div:nth-of-type(2) button:nth-of-type(1):before {
+        content: 'Download on the';
+        font-size: 12px;
+        width: 89px;
+        padding-left: 22px;
+    }
+    .converterProject div:nth-of-type(2) button:nth-of-type(1):after {
+        content: ' App Store';
+    }
+
+    .playTimeProject div:nth-of-type(2) {
+       margin-left: 20px
+     }
+
+     .converterProject div:nth-of-type(2) p:after {
+        font-size: 20px
+     }
+
+     .converterProject div:nth-of-type(2) button:nth-of-type(2) {
+        margin-top: 20px;
+        margin-left: 0px;
+        background-position: 5% 50%;
+        background-size: 19.6px 20px
+    }
+
+    .converterProject div:nth-of-type(2) button:nth-of-type(2):before {
+        content: 'Get it on';
+        font-size: 12px;
+        width: 89px;
+        padding-left: 20px;
+    }
+    .converterProject div:nth-of-type(2) button:nth-of-type(2):after {
+        content: ' Google Play';
+        font-size: 14px;
+        padding-left: 46px;
+    }
+
+
+
+    .playTimeProject div:nth-of-type(1) {
+        width: 255px;
+        height: 255px;
+        background-image: url('../images/play_project_sm.svg');
+    }
+
+    .playTimeProject div:nth-of-type(2) p {
+        width: 255px;
+        height: 109px;
+        font-size: 20px
+    }
+    .playTimeProject div:nth-of-type(2) button {
+        width: 126px;
+        height: 36px;
+        position: relative;
+        background-color: #212121
+    }
+    .playTimeProject div:nth-of-type(2) button:nth-of-type(1) {
+        margin-top: 24px;
+        background-position: 5% 50%;
+        background-size: 19.6px 20px
+    }
+    .playTimeProject div:nth-of-type(2) button:nth-of-type(1):before {
+        content: 'Download on the';
+        font-size: 12px;
+        width: 89px;
+        padding-left: 22px;
+        color: #FFFFFF
+    }
+    .playTimeProject div:nth-of-type(2) button:nth-of-type(1):after {
+        content: ' App Store';
+        font-size: 14px;
+        color: #FFFFFF
+    }
+
+    .playTimeProject div:nth-of-type(2) {
+       margin-left: 20px
+     }
+
+     .playTimeProject div:nth-of-type(2) p:after {
+        font-size: 20px
+     }
+
+     .playTimeProject div:nth-of-type(2) button:nth-of-type(2) {
+        margin-top: 20px;
+        margin-left: 0px;
+        background-position: 5% 50%;
+        background-size: 19.6px 20px
+    }
+
+    .playTimeProject div:nth-of-type(2) button:nth-of-type(2):before {
+        content: 'Get it on';
+        font-size: 12px;
+        width: 89px;
+        padding-left: 20px;
+        color: #FFFFFF
+    }
+    .playTimeProject div:nth-of-type(2) button:nth-of-type(2):after {
+        content: ' Google Play';
+        font-size: 14px;
+        padding-left: 46px;
+        color: #FFFFFF
+    }
+
+
+    .mathProject div:nth-of-type(1) {
+        width: 255px;
+        height: 255px;
+        background-image: url('../images/math_project_sm.svg');
+    }
+
+    .mathProject div:nth-of-type(2) p {
+        width: 255px;
+        height: 109px;
+        font-size: 20px
+    }
+    .mathProject div:nth-of-type(2) button {
+        width: 126px;
+        height: 36px;
+        position: relative;
+        background-color: #212121
+    }
+    .mathProject div:nth-of-type(2) button:nth-of-type(1) {
+        margin-top: 24px;
+        background-position: 5% 50%;
+        background-size: 19.6px 20px
+    }
+    .mathProject div:nth-of-type(2) button:nth-of-type(1):before {
+        content: 'Download on the';
+        font-size: 12px;
+        width: 89px;
+        padding-left: 22px;
+        color: #FFFFFF
+    }
+    .mathProject div:nth-of-type(2) button:nth-of-type(1):after {
+        content: ' App Store';
+        font-size: 14px;
+        color: #FFFFFF
+    }
+
+    .mathProject div:nth-of-type(2) {
+       margin-left: 20px
+     }
+
+     .mathProject div:nth-of-type(2) p:after {
+        font-size: 20px
+     }
+
+     .mathProject div:nth-of-type(2) button:nth-of-type(2) {
+        margin-top: 20px;
+        margin-left: 0px;
+        background-position: 5% 50%;
+        background-size: 19.6px 20px
+    }
+
+    .mathProject div:nth-of-type(2) button:nth-of-type(2):before {
+        content: 'Get it on';
+        font-size: 12px;
+        width: 89px;
+        padding-left: 20px;
+        color: #FFFFFF
+    }
+    .mathProject div:nth-of-type(2) button:nth-of-type(2):after {
+        content: ' Google Play';
+        font-size: 14px;
+        padding-left: 46px;
+        color: #FFFFFF
+    }
+
+
+    .minerProject div:nth-of-type(1) {
+        width: 255px;
+        height: 255px;
+        background-image: url('../images/minerbox_project_sm.svg');
+   }
+   .minerProject div:nth-of-type(2) p {
+        width: 257px;
+        height: 109px;
+    }
+    .minerProject div:nth-of-type(2) button {
+        width: 126px;
+        height: 36px;
+        position: relative
+    }
+    .minerProject div:nth-of-type(2) button:nth-of-type(1) {
+        margin-top: 34px;
+        background-position: 5% 50%;
+        background-size: 19.6px 20px
+    }
+    .minerProject div:nth-of-type(2) button:nth-of-type(1):before {
+        content: 'Download on the';
+        font-size: 12px;
+        width: 89px;
+        padding-left: 22px;
+    }
+    .minerProject div:nth-of-type(2) button:nth-of-type(1):after {
+        content: ' App Store';
+        font-size: 14px;
+    }
+
+    .minerProject div:nth-of-type(2) {
+       margin-left: 20px
+     }
+
+     .minerProject div:nth-of-type(2) p:after {
+        font-size: 20px
+     }
+
+     .minerProject div:nth-of-type(2) button:nth-of-type(2) {
+        margin-top: 20px;
+        margin-left: 0px;
+        background-position: 5% 50%;
+        background-size: 19.6px 20px
+    }
+
+    .minerProject div:nth-of-type(2) button:nth-of-type(2):before {
+        content: 'Get it on';
+        font-size: 12px;
+        width: 89px;
+        padding-left: 20px
+    }
+    .minerProject div:nth-of-type(2) button:nth-of-type(2):after {
+        content: ' Google Play';
+        font-size: 14px;
+        padding-left: 46px
+    }
+
+    .title {
+        font-size: 20px;
+    }
+    .img {
+        width: 100%;
+        height: 601px;
+        background: url('../images/background_sm.svg');
+      }
+    .main {
+        background-image: url('../images/main_sm.svg');
+        height: 356px;
+        width: 100%;
+        background-size: 100% 100%;
+    }
+    .mainContainer {
+        height: 356px;
+        width: 100%
+    }
+    .navContainer {
+        width: 100%;
+        height: 74px;
+        justify-content: center;
+    }
+    .navbar {
+        width: 91%;;
+    }
+    .menuWrapper {
+      display: none
+    }
+
+    ul {
+      margin-left: 0px;
+      align-items: flex-end;
+      width: 100%;
+      justify-content: space-between;
+    }
+
+    ul li a {
+        display: block;
+    }
+
+    ul li a:nth-of-type(1){
+        margin-left: -38px
+    }
+
+    ul li div  {
+        width: 100px;
+        height: 54px;
+        background-size: contain;
+        background-repeat: no-repeat;
+    }
+
+    .services {
+        width: 92%;
+    }
+
+    .servicesItems div:nth-of-type(1) {
+        width: 21.9%;
+        height: 88px;
+        text-align: center;
+        margin-left: 0
+    }
+    .servicesItems div:nth-of-type(2) {
+        width: 14%;
+        height: 88px;
+        margin-left: 13px;
+        text-align: center;
+    }
+    .servicesItems div:nth-of-type(3) {
+        margin-left: 60px;
+        width: 10.5%;
+    }
+    .servicesItems div:nth-of-type(4) {
+        margin-left: 87px;
+        width: 7.5%;
+    }
+    .servicesItems div:nth-of-type(5) {
+        margin-left: 82px;
+        width: 8.4%;
+
+    }
+    .servicesItems div:nth-of-type(1) p {
+        margin-top: 17px;
+      }
+
+      .servicesWrapper {
+        height: 200px;
+     }
+
+  }
+
+  @media screen and (min-width: 1280px) {
+    .projects {
+        width: 85.3%
+    }
+
+    .projectsItem, .projectsItemMath, .projectsItemPlayTime, .projectsItemConverter {
+        width: 48.6%
+     }
+    .title {
+        font-size: 20px;
+    }
+    .img {
+        width: 100%;
+        height: 1044px;
+        background: url('../images/background_lg.svg');
+      }
+    .main {
+        background-image: url('../images/main_lg.svg');
+        height: 572px;
+        width: 1199px;
+    }
+    .mainContainer {
+        height: 572px
+    }
+    .navContainer {
+        width: 100%;
+        height: 95px;
+        justify-content: center;
+    }
+    .navbar {
+        width: 70%;
+    }
+    ul {
+        align-items: flex-end;
+    }
+    ul li div  {
+        width: 140px;
+        height: 75px;
+        background-size: contain;
+        background-repeat: no-repeat;
+    }
+
+    ul li a {
+        font-size: 20px;
+        line-height: 23.44px
+    }
+
+    .services {
+        width: 84.3%;
+    }
+
+    .servicesItems div:nth-of-type(1) {
+        width: 17.4%;
+        height: 126px;
+        text-align: center;
+        margin-left: 0px
+    }
+    .servicesItems div:nth-of-type(2) {
+        width: 15.4%;
+        height: 115px;
+        margin-left: 50px;
+        text-align: center;
+    }
+    .servicesItems div:nth-of-type(3) {
+        margin-left: 110px;
+        width: 8.3%;
+        height: 115px
+    }
+    .servicesItems div:nth-of-type(4) {
+        margin-left: 161px;
+        width: 6.75%;
+        height: 115px
+    }
+    .servicesItems div:nth-of-type(5) {
+        margin-left: 167px;
+        width: 6.75%;
+        height: 115px
+
+    }
+    .servicesItems div:nth-of-type(1) p {
+        margin-top: 17px;
+      }
+
+      .servicesWrapper {
+        height: 293px;
+        align-items: center;
+     }
+
+     .servicesText {
+        font-size: 20px;
+        line-height: 23.44px;
+    }
+}
+
+@media screen and (min-width: 1920px) {
+    .projects {
+        width: 56.8%
+    }
+    .title {
+        font-size: 20px;
+    }
+
+    .img {
+        width: 100%;
+        height: 1044px;
+        background: url('../images/background_lg.svg');
+        background-repeat: no-repeat;
+        z-index: -10000;
+    }
+    .main {
+        background-image: url('../images/main_lg.svg');
+        height: 572px;
+        width: 1199px;
+    }
+    .navbar {
+        width: 46%;
+    }
+
+    .services {
+        width: 56.25%;
+    }
+}

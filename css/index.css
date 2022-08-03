@@ -3,8 +3,36 @@ body {
   padding: 0;
 }
 
+a {
+  text-decoration: none;
+}
+
 ::-webkit-scrollbar {
     width: 0px
+}
+.chat {
+    width: 70px;
+    height: 60px;
+    position: absolute;
+    background-image: url('../images/chat.png');
+    margin-left: 77.5%;
+    cursor: pointer;
+    display: block;
+    margin-top: 188px;
+    z-index: 5000;
+    background-size: cover;
+}
+.chat:hover {
+    width: 70px;
+    height: 60px;
+    position: absolute;
+    background-image: url('../images/chat_hovered.png');
+    margin-left: 77.5%;
+    cursor: pointer;
+    display: block;
+    margin-top: 188px;
+    z-index: 5000;
+    background-size: cover;
 }
 
 .navContainer {
@@ -13,22 +41,27 @@ body {
     display: flex;
     /* align-items: center; */
     /* justify-content: space-around; */
-    background: rgba(255, 255, 255, 0.61);
-    position: sticky;
+    background: rgba(255, 255, 255, 0.95);
+    position: fixed;
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    z-index: 1000000;
 }
 .navbar {
   width: 100%;
   display: flex;
-  position: sticky;
+  /* position: sticky; */
   align-items: center;
+
 }
 
 .menuWrapper {
   cursor: pointer;
   width: 26px;
   height: 20px;
-  padding-left: 14px;
+  margin-left: 14px;
+  margin-top: 18px;
+  position: fixed;
+  z-index: 250000000;
 }
 
 .menuBtn, .menuBtn:after, .menuBtn:before {
@@ -55,7 +88,7 @@ body {
 ul {
     display: flex;
     align-items: center;
-    margin-left:  calc(50% - 114px);
+    margin-left:  calc(50% - 80px);
 }
 
 ul li {
@@ -74,12 +107,14 @@ ul li div {
    background-image: url('../images/logo.svg');
 }
 
-ul li a {
+.about, .service, .project, .contactus{
     display: none;
-    cursor: pointer
+    cursor: pointer;
+    color: #212121;
+    text-decoration: none;
 }
 
-ul li a:hover{
+ul li:hover{
   color: #1E9EC3;
   text-decoration: underline
 }
@@ -87,14 +122,14 @@ ul li a:hover{
 /* burger menu for mobile */
 .navContainer.navContainerOpen{
   width: 100%;
-  height: 586px;
+  height: 100vh;
   background: rgba(33, 33, 33, 0.69);
   position: absolute;
   z-index: 10000;
 }
 .navbar.navOpen {
     width: 222px;
-    height: 586px;
+    height: 100vh;
     display: block;
     background: #212121;
  }
@@ -102,9 +137,10 @@ ul li a:hover{
  .menuItems.menuItemsOpen {
     display: block;
     margin-left: -22px;
+    margin-top: 50px
 }
 
-.menuItems.menuItemsOpen li a{
+.menuItems.menuItemsOpen li {
     color: #FFFFFF;
     display: block;
     font-family: 'Roboto';
@@ -118,9 +154,7 @@ ul li a:hover{
 ul.menuItemsOpen li div {
    display: none;
 }
-.menuWrapper.menuBtnOpen  {
-    padding-top: 32px
-}
+
 .menuWrapper.menuBtnOpen .menuBtn {
     background: #FFFFFF;
 }
@@ -137,6 +171,7 @@ ul.menuItemsOpen li div {
     width: 100%;
     display: flex;
     justify-content: center;
+    padding-top: 46px;
 }
 
 .main {
@@ -144,16 +179,16 @@ ul.menuItemsOpen li div {
     height: 269px;
     position: relative;
     z-index: -1000000;
-    background-image: url('../images/main_xs.svg');
-    background-size: cover;
+    background-image: url('../images/company.png');
+    background-size: 100% 100%;
     background-repeat: no-repeat;
 }
 
 .bodyContainer {
     width: 100%;
-    /* position: relative */
+    position: relative;
 }
-.servicesWrapper {
+#servicesWrapper {
    width: 100%;
    background-color: #212121;
    height: 254px;
@@ -195,7 +230,7 @@ ul.menuItemsOpen li div {
 .servicesItems div:nth-of-type(2) {
     width: 44.9%;
     height: 79px;
-    margin-left: 13px;
+    margin-left: 4.4%;
     text-align: center;
 }
 
@@ -209,7 +244,7 @@ ul.menuItemsOpen li div {
 .servicesItems div:nth-of-type(4) {
     width: 17.2%;
     height: 79px;
-    margin-left: 52px;
+    margin-left: 17.6%;
     margin-top: 19px;
     text-align: center;
 }
@@ -217,7 +252,7 @@ ul.menuItemsOpen li div {
 .servicesItems div:nth-of-type(5) {
     width: 19.5%;
     height: 79px;
-    margin-left: 63px;
+    margin-left: 21.2%;
     margin-top: 19px;
     text-align: center;
 }
@@ -234,11 +269,12 @@ ul.menuItemsOpen li div {
 .img {
   width: 100%;
   position: absolute;
-  background: url('../images/background_xs.svg');
+  background: url('../images/background_xs.png');
   height: 482px;
+  background-size: contain;
 }
 
-.projectsWrapper {
+#projectsWrapper {
     width: 100%;
     height: auto;
     margin-top: 31px;
@@ -293,6 +329,8 @@ ul.menuItemsOpen li div {
    display: flex;
    align-items: center;
    justify-content: center;
+   padding: 0px 5px;
+   box-sizing: border-box;
 }
 
 .slide2 {
@@ -303,10 +341,13 @@ ul.menuItemsOpen li div {
 }
 
 .slide3 {
-    width: 181px;
-    height: 136px;
-    background: url('../images/slide3.png');
-    background-size: cover;
+    width: 265px;
+    height: 194px;
+    background: url('../images/staff.png');
+    background-size: contain;
+    border-radius: 10px;
+    background-repeat: no-repeat;
+    background-position: 5% 9%;
 }
 .slide4  {
     width: 181px;
@@ -332,10 +373,9 @@ ul.menuItemsOpen li div {
 
 
 /* footer */
-.footerContainer {
+#footerContainer {
     width: 100%;
     display: flex;
-    border-radius: 10px;
     flex-direction: column;
     justify-content: center;
     margin-top: 24px;
@@ -400,64 +440,64 @@ ul.menuItemsOpen li div {
 }
 .map img {
     width: 100%;
-    height: 100%s
+    height: 100%
 }
 
-.icons div:nth-of-type(1) {
+.icons a:nth-of-type(1) {
    width: 14px;
    height: 22px;
    cursor: pointer;
-   background: url('../images/facebook.svg');
+   background: url('../images/facebook.png');
    background-repeat: no-repeat;
    background-size: contain;
 }
 
-.icons div:nth-of-type(1):hover {
+.icons a:nth-of-type(1):hover {
     width: 14px;
     height: 22px;
     cursor: pointer;
-    background: url('../images/facebook_hovered.svg');
+    background: url('../images/facebook_hovered.png');
     background-repeat: no-repeat;
     background-size: contain;
  }
 
-.icons div:nth-of-type(2) {
+.icons a:nth-of-type(2) {
     margin-left: 20px;
     width: 22px;
     height: 20px;
     cursor: pointer;
-    background: url('../images/linkedin.svg');
+    background: url('../images/linkedin.png');
     background-repeat: no-repeat;
     background-size: contain;
 }
 
-.icons div:nth-of-type(2):hover {
+.icons a:nth-of-type(2):hover {
     margin-left: 20px;
     width: 22px;
     height: 20px;
     cursor: pointer;
-    background: url('../images/linkedin_hovered.svg');
+    background: url('../images/linkedin_hovered.png');
     background-repeat: no-repeat;
     background-size: contain;
 }
 
-.icons div:nth-of-type(3) {
+.icons a:nth-of-type(3) {
     margin-left: 20px;
     width: 22px;
     height: 20px;
     align-self: flex-end;
     cursor: pointer;
-    background: url('../images/twitter.svg');
+    background: url('../images/twitter.png');
     background-repeat: no-repeat;
     background-size: cover;
 }
 
-.icons div:nth-of-type(3):hover {
+.icons a:nth-of-type(3):hover {
     margin-left: 20px;
     width: 22px;
     height: 20px;
     cursor: pointer;
-    background: url('../images/twitter_hovered.svg');
+    background: url('../images/twitter_hovered.png');
     background-repeat: no-repeat;
     background-size: cover;
 }
@@ -477,11 +517,11 @@ ul.menuItemsOpen li div {
 
 /* about section */
 
-.aboutContainer {
+#aboutContainer {
    width: 100%;
 }
 
-.aboutContainer div {
+#aboutContainer div {
     width: 92.5% ;
     height: 200px;
     margin: auto;
@@ -507,6 +547,8 @@ ul.menuItemsOpen li div {
     font-size: 16px;
     color: #212121;
     line-height: 19px;
+    column-gap: 40px;
+    margin: auto;
 }
 
 .aboutRead {
@@ -545,11 +587,10 @@ ul.menuItemsOpen li div {
 .minerManagementProject div:nth-of-type(1) {
     width: 100%;
     height: 40vw;
-    background-color: #FFFFFF;
-    background-image: url('../images/management_project.svg');
+    background-image: url('../images/miner_management_sm.png');
     background-repeat: no-repeat;
     margin-top: 14px;
-    background-size: contain
+    background-size: cover
 }
 .minerManagementproject {
   display: flex;
@@ -590,7 +631,7 @@ ul.menuItemsOpen li div {
     border-radius: 20px;
     background-image: url('../images/converter_project.png');
     background-repeat: no-repeat;
-    background-position: 50% 50%;
+    background-position: -10% 50%;
     margin-top: 14px;
     background-size: contain
 }
@@ -624,16 +665,18 @@ ul.menuItemsOpen li div {
 }
 
 .converterProject div:nth-of-type(2) button:nth-of-type(1) {
-   background-image: url('../images/app_store.svg');
+   background-image: url('../images/app_store.png');
    background-repeat: no-repeat;
    background-position: 50% 50%;
+   background-size: 24px 24px;
  }
 
-.converterProject div:nth-of-type(2) button:nth-of-type(2) {
+.converterProject div:nth-of-type(2) a:nth-of-type(2) button{
   margin-left: 14px;
-  background-image: url('../images/google_play.svg');
+  background-image: url('../images/google_play.png');
   background-repeat: no-repeat;
   background-position: 50% 50%;
+  background-size: 20px 24px;
 }
 
 /* playtime project */
@@ -699,16 +742,18 @@ ul.menuItemsOpen li div {
 }
 
 .playTimeProject div:nth-of-type(2) button:nth-of-type(1) {
-   background-image: url('../images/app_store.svg');
+   background-image: url('../images/app_store.png');
    background-repeat: no-repeat;
    background-position: 50% 50%;
+   background-size: 24px 24px;
  }
 
-.playTimeProject div:nth-of-type(2) button:nth-of-type(2) {
+.playTimeProject div:nth-of-type(2) a:nth-of-type(2) button{
   margin-left: 14px;
-  background-image: url('../images/google_play.svg');
+  background-image: url('../images/google_play.png');
   background-repeat: no-repeat;
   background-position: 50% 50%;
+  background-size: 20px 24px;
 }
 
 /* math project */
@@ -720,6 +765,16 @@ ul.menuItemsOpen li div {
     font-style: normal;
     font-weight: 400;
     margin-top: 10px
+}
+
+.projectTitleMath img {
+    width: 28px;
+    height: 28px
+}
+
+.projectTitlePlayTime img {
+    width: 28px;
+    height: 28px
 }
 
 .projectTitleMath:nth-of-type(1) span {
@@ -736,10 +791,11 @@ ul.menuItemsOpen li div {
     background-color: #FFFFFF;
     box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
     border-radius: 20px;
-    background-image: url('../images/math_project.svg');
+    background-image: url('../images/math_project.png');
     background-repeat: no-repeat;
     background-position: 50% 50%;
     margin-top: 14px;
+    background-size: 121px 142px;
 }
 .mathProject {
   display: flex;
@@ -771,27 +827,29 @@ ul.menuItemsOpen li div {
 }
 
 .mathProject div:nth-of-type(2) button:nth-of-type(1) {
-   background-image: url('../images/app_store.svg');
+   background-image: url('../images/app_store.png');
    background-repeat: no-repeat;
    background-position: 50% 50%;
+   background-size: 24px 24px;
  }
 
-.mathProject div:nth-of-type(2) button:nth-of-type(2) {
+.mathProject div:nth-of-type(2) a:nth-of-type(2) button {
   margin-left: 14px;
-  background-image: url('../images/google_play.svg');
+  background-image: url('../images/google_play.png');
   background-repeat: no-repeat;
   background-position: 50% 50%;
+  background-size: 20px 24px;
 }
 
 /* miner project */
-.projectsItem:nth-of-type(1) span {
+.minerTitle {
     margin-left: 13px;
     color: #1E989B;
 }
 
 .minerProject div:nth-of-type(2) {
     margin-left: 10px
-  }
+}
 
 .minerProject div:nth-of-type(1) {
      width: 166px;
@@ -799,10 +857,11 @@ ul.menuItemsOpen li div {
      background-color: #FFFFFF;
      box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
      border-radius: 20px;
-     background-image: url('../images/minerbox_project.svg');
+     background-image: url('../images/minerbox_project.png');
      background-repeat: no-repeat;
      background-position: 50% 50%;
      margin-top: 14px;
+     background-size: contain;
 }
 .minerProject {
    display: flex;
@@ -835,21 +894,83 @@ ul.menuItemsOpen li div {
  }
 
  .minerProject div:nth-of-type(2) button:nth-of-type(1) {
-    background-image: url('../images/app_store.svg');
+    background-image: url('../images/app_store.png');
     background-repeat: no-repeat;
     background-position: 50% 50%;
+    background-size: 24px 24px;
   }
 
- .minerProject div:nth-of-type(2) button:nth-of-type(2) {
+ .minerProject div:nth-of-type(2) a:nth-of-type(2) button {
    margin-left: 14px;
-   background-image: url('../images/google_play.svg');
+   background-image: url('../images/google_play.png');
    background-repeat: no-repeat;
    background-position: 50% 50%;
+   background-size: 20px 24px;
  }
 
 /* media queries */
 @media screen and (min-width: 320px) {
+    .projectsItemConverter, .projectsItemPlayTime, .projectsItemMath, .projectsItemMinerManagement {
+        margin-top: 8px;
+    }
+    .spin1, .spin2, .spin3751, .spin3752, .spin7441, .spin7442 {
+        display: none
+    }
+
+    .spin3201, .spin3202 {
+        display: block
+    }
+
+    .main {
+        width: 320px;
+        margin: 10px auto;
+        background-image: url('../images/company_320.png');
+    }
+    .spin1, .spin2, .spin7441, .spin7442, .spin3751, .spin3752 {
+        display: none
+    }
+
+    .spin3201 {
+        position: absolute;
+        margin-left: 20px;
+        margin-top: 12px;
+        width: 230px;
+        animation: spin 25s linear infinite;
+        height: 244px;
+    }
+
+    .spin3202 {
+        position: absolute;
+        margin-left: 40px;
+        margin-top: 27px;
+        width: 203px;
+        animation: spin1 35s linear infinite;
+        height: 217px;
+    }
+
+    @keyframes spin {
+        100% {transform: rotate(360deg);}
+    }
+    @keyframes spin1 {
+        100% {transform: rotate(-360deg);}
+    }
+
+    .btnTextDownload {
+        display: none;
+    }
+
+    .btnTextApp {
+        display: none;
+    }
     .footerLogo {
+        display: none;
+        margin-top: 20px;
+    }
+    .btnTextGet {
+        display: none;
+    }
+
+    .btnTextGoogle {
         display: none;
     }
     .aboutNewLineSecond {
@@ -876,6 +997,17 @@ ul.menuItemsOpen li div {
 
 }
 @media screen and (min-width: 375px) {
+    .projectsItemConverter, .projectsItemPlayTime, .projectsItemMath, .projectsItemMinerManagement {
+        margin-top: 18px;
+    }
+    .chat {
+       margin-top: 300px
+    }
+    .chat:hover {
+        margin-top: 300px;
+        background-image: url('../images/chat_hovered.png');
+        background-size: cover;
+    }
     .aboutNewLineSecond {
         display: none
     }
@@ -903,9 +1035,9 @@ ul.menuItemsOpen li div {
     .projects {
         width: 100%;
     }
-    .projectsItem {
-      width: 92.2%
-    }
+    .projectsItem, .projectsItemMath, .projectsItemPlayTime, .projectsItemConverter {
+        width: 92.5%
+     }
 
     .minerManagementProject div:nth-of-type(1) {
         width: 100%;
@@ -920,14 +1052,51 @@ ul.menuItemsOpen li div {
         content: 'MinerBox is a tool, that is designed for cryptocoin miners to make easy control and monitor of the mining process.'
      }
     .navContainer.navContainerOpen{
-        height: 812px;
+        height: 100vh;
     }
     .navbar.navOpen {
-        height: 812px;;
+        height: 100vh;;
+     }
+
+     .spin3202, .spin3201 {
+         display: none
      }
     .main {
-        height: 356px;
+        width: 375px;
+        margin: 10px auto;
+        height: 342px;
+        background-image: url('../images/company_375.png');
     }
+
+    .spin3752 {
+        position: absolute;
+        animation: spin 35s linear infinite;
+        height: 276px;
+        margin-left: 44px;
+        margin-top: 35px;
+        width: 258px;
+    }
+
+    .spin3751, .spin3752 {
+        display: block
+    }
+
+    .spin3751 {
+        position: absolute;
+        width: 294px;
+        height: 309px;
+        margin-left: 24px;
+        margin-top: 17px;
+        animation: spin1 25s linear infinite;
+    }
+
+    @keyframes spin {
+        100% {transform: rotate(360deg);}
+    }
+    @keyframes spin1 {
+        100% {transform: rotate(-360deg);}
+    }
+
     .mainContainer {
         height: 356px;
     }
@@ -935,19 +1104,24 @@ ul.menuItemsOpen li div {
         margin-left: 24px;
         width: 42.7%
     }
+
+    .servicesItems div:nth-of-type(1) p{
+        width: 150px;
+        margin: auto
+    }
     .servicesItems div:nth-of-type(2) {
-        margin-left: 24px;
+        margin-left: 6.9%;
         width: 37.8%
     }
     .servicesItems div:nth-of-type(3) {
         width: 20.5%
     }
     .servicesItems div:nth-of-type(4) {
-        margin-left: 78px;
+        margin-left: 22.4%;
         width: 14.5%
     }
     .servicesItems div:nth-of-type(5) {
-        margin-left: 83px;
+        margin-left: 23.9%;
         width: 16.5%
     }
     .services {
@@ -955,19 +1129,42 @@ ul.menuItemsOpen li div {
     }
 }
 @media screen and (min-width: 744px) {
-    .icons div:nth-of-type(2) {
+    .projectsItemConverter, .projectsItemPlayTime, .projectsItemMath, .projectsItemMinerManagement {
+        margin-top: 8px;
+    }
+    .map img {
+        padding: 0px 2vw
+    }
+    .spin7441, .spin7442 {
+        display: block
+    }
+
+    .spin1, .spin2, .spin3751, .spin3752 {
+        display: none
+    }
+    .chat {
+        margin-top: 516px;
+        margin-left: 86.5%
+     }
+     .chat:hover {
+        margin-top: 516px;
+        margin-left: 86.5%;
+        background-image: url('../images/chat_hovered.png');
+        background-size: cover;
+    }
+    .icons a:nth-of-type(2) {
         margin-left: 40px;
     }
 
-    .icons div:nth-of-type(2):hover {
+    .icons a:nth-of-type(2):hover {
         margin-left: 40px;
     }
 
-    .icons div:nth-of-type(3) {
+    .icons a:nth-of-type(3) {
         margin-left: 40px;
     }
 
-    .icons div:nth-of-type(3):hover {
+    .icons a:nth-of-type(3):hover {
         margin-left: 40px;
     }
 
@@ -1018,6 +1215,7 @@ ul.menuItemsOpen li div {
         grid-column: 2/3;
         margin-bottom: 0px;
         text-align: right;
+        padding: 0px -2vw
      }
     .icons {
         display: flex;
@@ -1033,7 +1231,7 @@ ul.menuItemsOpen li div {
     .aboutLine {
         display: none
     }
-    .aboutContainer div {
+    #aboutContainer div {
         width: 92% ;
         margin: 0;
         height: 310px
@@ -1063,8 +1261,7 @@ ul.menuItemsOpen li div {
     .minerManagementProject div:nth-of-type(1) {
         width: 100%;
         height: 21vw;
-        background-color: #FFFFFF;
-        background-image: url('../images/management_sm.svg');
+        background-image: url('../images/miner_management_md.png');
         background-repeat: no-repeat;
         margin-top: 14px;
         background-size: cover
@@ -1083,23 +1280,15 @@ ul.menuItemsOpen li div {
         font-size: 20px
     }
     .converterProject div:nth-of-type(2) button {
-        width: 126px;
+        width: 135px;
         height: 36px;
         position: relative;
+        text-align: left
     }
     .converterProject div:nth-of-type(2) button:nth-of-type(1) {
         margin-top: 24px;
         background-position: 5% 50%;
         background-size: 19.6px 20px
-    }
-    .converterProject div:nth-of-type(2) button:nth-of-type(1):before {
-        content: 'Download on the';
-        font-size: 12px;
-        width: 89px;
-        padding-left: 22px;
-    }
-    .converterProject div:nth-of-type(2) button:nth-of-type(1):after {
-        content: ' App Store';
     }
 
     .playTimeProject div:nth-of-type(2) {
@@ -1110,26 +1299,12 @@ ul.menuItemsOpen li div {
         font-size: 20px
      }
 
-     .converterProject div:nth-of-type(2) button:nth-of-type(2) {
+     .converterProject div:nth-of-type(2) a:nth-of-type(2) button {
         margin-top: 20px;
         margin-left: 0px;
         background-position: 5% 50%;
         background-size: 19.6px 20px
     }
-
-    .converterProject div:nth-of-type(2) button:nth-of-type(2):before {
-        content: 'Get it on';
-        font-size: 12px;
-        width: 89px;
-        padding-left: 20px;
-    }
-    .converterProject div:nth-of-type(2) button:nth-of-type(2):after {
-        content: ' Google Play';
-        font-size: 14px;
-        padding-left: 46px;
-    }
-
-
 
     .playTimeProject div:nth-of-type(1) {
         width: 255px;
@@ -1143,27 +1318,16 @@ ul.menuItemsOpen li div {
         font-size: 20px
     }
     .playTimeProject div:nth-of-type(2) button {
-        width: 126px;
+        width: 135px;
         height: 36px;
         position: relative;
-        background-color: #212121
+        background-color: #212121;
+        text-align: left;
     }
-    .playTimeProject div:nth-of-type(2) button:nth-of-type(1) {
+    .playTimeProject div:nth-of-type(2) a:nth-of-type(1) button{
         margin-top: 24px;
         background-position: 5% 50%;
         background-size: 19.6px 20px
-    }
-    .playTimeProject div:nth-of-type(2) button:nth-of-type(1):before {
-        content: 'Download on the';
-        font-size: 12px;
-        width: 89px;
-        padding-left: 22px;
-        color: #FFFFFF
-    }
-    .playTimeProject div:nth-of-type(2) button:nth-of-type(1):after {
-        content: ' App Store';
-        font-size: 14px;
-        color: #FFFFFF
     }
 
     .playTimeProject div:nth-of-type(2) {
@@ -1174,32 +1338,18 @@ ul.menuItemsOpen li div {
         font-size: 20px
      }
 
-     .playTimeProject div:nth-of-type(2) button:nth-of-type(2) {
+     .playTimeProject div:nth-of-type(2) a:nth-of-type(2) button{
         margin-top: 20px;
         margin-left: 0px;
         background-position: 5% 50%;
         background-size: 19.6px 20px
     }
 
-    .playTimeProject div:nth-of-type(2) button:nth-of-type(2):before {
-        content: 'Get it on';
-        font-size: 12px;
-        width: 89px;
-        padding-left: 20px;
-        color: #FFFFFF
-    }
-    .playTimeProject div:nth-of-type(2) button:nth-of-type(2):after {
-        content: ' Google Play';
-        font-size: 14px;
-        padding-left: 46px;
-        color: #FFFFFF
-    }
-
-
     .mathProject div:nth-of-type(1) {
         width: 255px;
         height: 255px;
-        background-image: url('../images/math_project_sm.svg');
+        background-image: url('../images/math_project.png');
+        background-size: 187px 219px;
     }
 
     .mathProject div:nth-of-type(2) p {
@@ -1208,27 +1358,16 @@ ul.menuItemsOpen li div {
         font-size: 20px
     }
     .mathProject div:nth-of-type(2) button {
-        width: 126px;
+        width: 135px;
         height: 36px;
         position: relative;
-        background-color: #212121
+        background-color: #212121;
+        text-align: left;
     }
     .mathProject div:nth-of-type(2) button:nth-of-type(1) {
         margin-top: 24px;
         background-position: 5% 50%;
         background-size: 19.6px 20px
-    }
-    .mathProject div:nth-of-type(2) button:nth-of-type(1):before {
-        content: 'Download on the';
-        font-size: 12px;
-        width: 89px;
-        padding-left: 22px;
-        color: #FFFFFF
-    }
-    .mathProject div:nth-of-type(2) button:nth-of-type(1):after {
-        content: ' App Store';
-        font-size: 14px;
-        color: #FFFFFF
     }
 
     .mathProject div:nth-of-type(2) {
@@ -1239,56 +1378,60 @@ ul.menuItemsOpen li div {
         font-size: 20px
      }
 
-     .mathProject div:nth-of-type(2) button:nth-of-type(2) {
+     .mathProject div:nth-of-type(2) a:nth-of-type(2) button{
         margin-top: 20px;
         margin-left: 0px;
         background-position: 5% 50%;
         background-size: 19.6px 20px
     }
 
-    .mathProject div:nth-of-type(2) button:nth-of-type(2):before {
-        content: 'Get it on';
-        font-size: 12px;
-        width: 89px;
-        padding-left: 20px;
-        color: #FFFFFF
-    }
-    .mathProject div:nth-of-type(2) button:nth-of-type(2):after {
-        content: ' Google Play';
-        font-size: 14px;
-        padding-left: 46px;
-        color: #FFFFFF
-    }
-
-
     .minerProject div:nth-of-type(1) {
         width: 255px;
         height: 255px;
-        background-image: url('../images/minerbox_project_sm.svg');
+        background-image: url('../images/minerbox_project.png');
    }
    .minerProject div:nth-of-type(2) p {
         width: 257px;
         height: 109px;
     }
-    .minerProject div:nth-of-type(2) button {
-        width: 126px;
+    .minerProject div:nth-of-type(2) a button {
+        width: 135px;
         height: 36px;
-        position: relative
+        position: relative;
+        color: black;
+        text-align: left;
     }
     .minerProject div:nth-of-type(2) button:nth-of-type(1) {
         margin-top: 34px;
         background-position: 5% 50%;
         background-size: 19.6px 20px
     }
-    .minerProject div:nth-of-type(2) button:nth-of-type(1):before {
-        content: 'Download on the';
-        font-size: 12px;
-        width: 89px;
-        padding-left: 22px;
+
+    .btnTextDownload {
+        display: block;
+        color:black;
+        font-size: 11px;
+        margin-left: 18px;
+        padding-left: 6px;
     }
-    .minerProject div:nth-of-type(2) button:nth-of-type(1):after {
-        content: ' App Store';
-        font-size: 14px;
+
+    .btnTextApp {
+        display: block;
+        color:black;
+        font-size: 16px;
+    }
+
+    .btnTextGet {
+        display: block;
+        color:black;
+        font-size: 12px;
+        margin-left: 21px
+    }
+
+    .btnTextGoogle {
+        display: block;
+        color:black;
+        font-size: 16px;
     }
 
     .minerProject div:nth-of-type(2) {
@@ -1299,23 +1442,11 @@ ul.menuItemsOpen li div {
         font-size: 20px
      }
 
-     .minerProject div:nth-of-type(2) button:nth-of-type(2) {
+     .minerProject div:nth-of-type(2) a:nth-of-type(2) button{
         margin-top: 20px;
         margin-left: 0px;
         background-position: 5% 50%;
         background-size: 19.6px 20px
-    }
-
-    .minerProject div:nth-of-type(2) button:nth-of-type(2):before {
-        content: 'Get it on';
-        font-size: 12px;
-        width: 89px;
-        padding-left: 20px
-    }
-    .minerProject div:nth-of-type(2) button:nth-of-type(2):after {
-        content: ' Google Play';
-        font-size: 14px;
-        padding-left: 46px
     }
 
     .title {
@@ -1324,17 +1455,51 @@ ul.menuItemsOpen li div {
     .img {
         width: 100%;
         height: 601px;
-        background: url('../images/background_sm.svg');
+        background: url('../images/background_sm.png');
+        background-size: contain;
       }
     .main {
-        background-image: url('../images/main_sm.svg');
+        background-image: url('../images/company_744.png');
         height: 356px;
         width: 100%;
-        background-size: 100% 100%;
+        background-size: contain;
+        position: relative
+    }
+
+    .main {
+        width: 744px;
+        margin: auto;
+        opacity: 1;
+        height: 335px
+    }
+    .spin7441 {
+        position: absolute;
+        margin-left: 14px;
+        margin-top: 16px;
+        width: 294px;
+        animation: spin 25s linear infinite;
+        height: 297px;
+    }
+
+    .spin7442 {
+        position: absolute;
+        margin-left: 43px;
+        margin-top: 34px;
+        width: 252px;
+        animation: spin1 35s linear infinite;
+        height: 268px;
+    }
+
+    @keyframes spin {
+        100% {transform: rotate(360deg);}
+    }
+    @keyframes spin1 {
+        100% {transform: rotate(-360deg);}
     }
     .mainContainer {
         height: 356px;
-        width: 100%
+        width: 100%;
+        padding-top: 74px
     }
     .navContainer {
         width: 100%;
@@ -1355,11 +1520,11 @@ ul.menuItemsOpen li div {
       justify-content: space-between;
     }
 
-    ul li a {
+    .about, .service, .project, .contactus{
         display: block;
     }
 
-    ul li a:nth-of-type(1){
+    .service {
         margin-left: -38px
     }
 
@@ -1383,19 +1548,19 @@ ul.menuItemsOpen li div {
     .servicesItems div:nth-of-type(2) {
         width: 14%;
         height: 88px;
-        margin-left: 13px;
+        margin-left: 2%;
         text-align: center;
     }
     .servicesItems div:nth-of-type(3) {
-        margin-left: 60px;
+        margin-left: 8.7%;
         width: 10.5%;
     }
     .servicesItems div:nth-of-type(4) {
-        margin-left: 87px;
+        margin-left: 12.7%;
         width: 7.5%;
     }
     .servicesItems div:nth-of-type(5) {
-        margin-left: 82px;
+        margin-left: 14%;
         width: 8.4%;
 
     }
@@ -1403,7 +1568,7 @@ ul.menuItemsOpen li div {
         margin-top: 17px;
       }
 
-      .servicesWrapper {
+      #servicesWrapper {
         height: 200px;
      }
 
@@ -1411,11 +1576,36 @@ ul.menuItemsOpen li div {
 
   @media screen and (min-width: 1280px) {
 
-    .icons div:nth-of-type(2) {
+    .minerManagementProject div:nth-of-type(1) {
+        width: 100%;
+        height: 21vw;
+        background-color: #FFFFFF;
+        background-image: url('../images/miner_management_lg.png');
+        background-repeat: no-repeat;
+        margin-top: 14px;
+        background-size: cover
+    }
+
+    .chat {
+        margin-top: -71px;
+        margin-left: 86.5%;
+        width: 80px;
+        height: 80px;
+        background-size: 100% 100%;
+    }
+
+    .chat:hover {
+        margin-top: -71px;
+        margin-left: 86.5%;
+        background-image: url('../images/chat_hovered.png');
+        background-size: cover;
+    }
+
+    .icons a:nth-of-type(2) {
         margin-left: 40px;
     }
 
-    .icons div:nth-of-type(3) {
+    .icons a:nth-of-type(3) {
         margin-left: 40px;
     }
 
@@ -1425,6 +1615,11 @@ ul.menuItemsOpen li div {
         display: flex;
         justify-content: center;
     }
+
+    .footerLogo img {
+       padding-left: 7vw
+    }
+
     .footer {
         width: 85.3%;
         display:grid;
@@ -1474,13 +1669,14 @@ ul.menuItemsOpen li div {
         text-align: center;
         display: flex;
         align-items: flex-end;
+        padding: 0px 6vw;
       }
 
     .aboutNewLineSecond {
         display: none
     }
 
-    .aboutContainer div {
+    #aboutContainer div {
         width: 92% ;
         height: 200px;
         margin: 0;
@@ -1517,15 +1713,40 @@ ul.menuItemsOpen li div {
     .title {
         font-size: 20px;
     }
-    .img {
-        width: 100%;
-        height: 1044px;
-        background: url('../images/background_lg.svg');
-      }
     .main {
-        background-image: url('../images/main_lg.svg');
+        position:relative;
+        margin-top: 35px;
+        background-image: url('../images/company.png');
         height: 572px;
         width: 1199px;
+        background-size: 100% 95%;
+    }
+    .spin7441, .spin7442 {
+        display:  none
+    }
+    .spin1 {
+        display: block;
+        position: absolute;
+        margin-left: 38px;
+        margin-top: 22px;
+        width: 471px;
+        animation: spin 25s linear infinite
+    }
+
+    .spin2 {
+        display: block;
+        position: absolute;
+        margin-left: 79px;
+        margin-top: 52px;
+        width: 406px;
+        animation: spin1 35s linear infinite;
+    }
+
+    @keyframes spin {
+        100% {transform: rotate(360deg);}
+    }
+    @keyframes spin1 {
+        100% {transform: rotate(-360deg);}
     }
     .mainContainer {
         height: 572px
@@ -1548,13 +1769,13 @@ ul.menuItemsOpen li div {
         background-repeat: no-repeat;
     }
 
-    ul li a {
+    ul li  {
         font-size: 20px;
         line-height: 23.44px
     }
 
     .services {
-        width: 84.3%;
+        width: 85.3%;
     }
 
     .servicesItems div:nth-of-type(1) {
@@ -1563,24 +1784,29 @@ ul.menuItemsOpen li div {
         text-align: center;
         margin-left: 0px
     }
+
+    .servicesItems div:nth-of-type(1) p {
+        width: 188px;
+    }
+
     .servicesItems div:nth-of-type(2) {
         width: 15.4%;
         height: 115px;
-        margin-left: 50px;
+        margin-left: 4.6%;
         text-align: center;
     }
     .servicesItems div:nth-of-type(3) {
-        margin-left: 110px;
+        margin-left: 10%;
         width: 8.3%;
         height: 115px
     }
     .servicesItems div:nth-of-type(4) {
-        margin-left: 161px;
+        margin-left: 14.7%;
         width: 6.75%;
         height: 115px
     }
     .servicesItems div:nth-of-type(5) {
-        margin-left: 167px;
+        margin-left: 16%;
         width: 6.75%;
         height: 115px
 
@@ -1589,7 +1815,7 @@ ul.menuItemsOpen li div {
         margin-top: 17px;
       }
 
-      .servicesWrapper {
+      #servicesWrapper {
         height: 293px;
         align-items: center;
      }
@@ -1598,9 +1824,25 @@ ul.menuItemsOpen li div {
         font-size: 20px;
         line-height: 23.44px;
     }
+    .projectTitleConverter {
+        margin-top: 0px
+    }
 }
 
 @media screen and (min-width: 1920px) {
+     .chat {
+        margin-top: 181px;
+        margin-left: 79.5%;
+    }
+    .chat:hover {
+        margin-top: 181px;
+        margin-left: 79.5%;
+        background-image: url('../images/chat_hovered.png');
+        background-size: cover;
+    }
+    .slidesWrapper {
+        width: 100%
+    }
     .minerManagementProject div:nth-of-type(1) {
         width: 100%;
         height: 13vw;
@@ -1614,6 +1856,9 @@ ul.menuItemsOpen li div {
     .footer {
         width: 56.8%;
     }
+    .copyright {
+        padding: 0 4vw
+    }
     .title {
         font-size: 20px;
     }
@@ -1621,12 +1866,13 @@ ul.menuItemsOpen li div {
     .img {
         width: 100%;
         height: 1044px;
-        background: url('../images/background_lg.svg');
+        background: url('../images/background_lg.png');
         background-repeat: no-repeat;
+        background-size: contain;
         z-index: -10000;
     }
     .main {
-        background-image: url('../images/main_lg.svg');
+        background-image: url('../images/company.png');
         height: 572px;
         width: 1199px;
     }

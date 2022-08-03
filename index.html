@@ -6,57 +6,70 @@
     <meta name="viewport" content="width=device-width,initial-scale=1">
   </head>
   <body>
+   <div class='menuWrapper'>
+      <div class='menuBtn'>
+      </div>
+   </div>
     <div class='navContainer'>
         <nav class='navbar'>
-            <div class='menuWrapper'>
-            <div class='menuBtn'>
-            </div>
-            </div>
             <ul class='menuItems'>
-                <li><a>Services</a></li>
-                <li><a>Projects</a></li>
+                <li class='service'>Services</li>
+                <li class='project'>Projects</li>
                 <li><div class='logo'></div></li>
-                <li><a>About</a></li>
-                <li><a>Contact Us</a></li>
+                <li class='about'>About</li>
+                <li class='contactus'>Contact Us</li>
             </ul>
         </nav>
     </div>
     <div class='mainContainer'>
-      <div class='main'></div>
+      <div class='main'>
+         <img class='spin3201' src='./images/unfilled_circle.png' />
+         <img class='spin3202' src='./images/filled_circle.png' />
+
+         <img class='spin3751' src='./images/unfilled_circle.png' />
+         <img class='spin3752' src='./images/filled_circle.png' />
+
+         <img class='spin1' src='./images/unfilled_circle.png' />
+         <img class='spin2' src='./images/filled_circle_lg.png' />
+
+         <img class='spin7441' src='./images/unfilled_circle.png' />
+         <img class='spin7442' src='./images/filled_circle.png' />
+      </div>
     </div>
     <div class='bodyContainer'>
+      <div class='chat'></div>
       <div class='img'></div>
-      <div class='servicesWrapper'>
+      <div id='servicesWrapper'>
         <div class='services'>
            <p class='title'>Services</p>
            <div class='servicesItems'>
              <div>
-                <img src='./images/mobile.svg' />
+                <img style='width: 20.67px; height: 40px' src='./images/mobile.png' />
                 <p class='servicesText'>
                   Mobile Development
                   (IOS, Android)
                 </p>
              </div>
              <div>
-                <img src='./images/web.svg' />
+                <img style='width: 40px; height: 40px' src='./images/web.png' />
                 <p class='servicesText'>
                   Web Development
                 </p>
              </div>
              <div>
-                <img src='./images/bug.svg' />
+                <img style='width:35px; height: 40px' src='./images/bug.png' />
                 <p class='servicesText'>
                   Test & Fix
                 </p>
              </div>
              <div>
-                <img src='./images/design.svg' />
+                <img style='width:48.67px; height: 40px' src='./images/design.png' />
                 <p class='servicesText'>
                   Design
                 </p>
              </div>
              <div>
-                <img src='./images/settings.svg' />
+                <img style='width: 40px; height: 40px' src='./images/settings.png' />
                 <p class='servicesText'>
                   Support
                 </p>
@@ -64,79 +77,135 @@
            </div>
         </div>
       </div>
-      <div class='projectsWrapper'>
+      <div id='projectsWrapper'>
          <p class='title' style='color: #212121'>Projects</p>
          <div class='projects'>
             <div class='projectsItem'>
                <div class='projectTitle'>
-                  <img src='./images/minerbox_logo.svg'/>
-                  <span>MinerBox</span>
+                  <img style='width:28px; height: 28px' src='./images/minerbox_logo.png'/>
+                  <span class='minerTitle'>MinerBox</span>
                </div>
                <div class='minerProject'>
                  <div></div>
                  <div>
                     <p></p>
-                    <button></button>
+                    <a href='https://itunes.apple.com/us/app/minerbox/id1445878254?ls=1&mt=8'>
+                     <button>
+                        <span class='btnTextDownload'>
+                           Download on the
+                           <span class='btnTextApp'>App Store</span>
+                        </span>
+                     </button>
+                  </a>
                     <br class='newLine' />
-                    <button></button>
+                    <a href='https://play.google.com/store/apps/details?id=com.witplex.minerbox_android'>
+                     <button>
+                        <span class='btnTextGet'>
+                           Get it on
+                           <span class='btnTextGoogle'>Google Play</span>
+                        </span>
+                     </button>
+                  </a>
                  </div>
                </div>
             </div>
-            <div class='projectsItemMath'>
-              <div class='projectTitleMath'>
-                 <img src='./images/math_logo.svg'/>
-                 <span>PreMath</span>
-              </div>
-              <div class='mathProject'>
-                <div></div>
-                <div>
-                   <p></p>
-                   <button></button>
-                   <br class='newLine' />
-                   <button></button>
-                </div>
-              </div>
-           </div>
+            <div class='projectsItemConverter'>
+               <div class='projectTitleConverter'>
+                  <img src='./images/converter_logo.png'/>
+                  <span>Coin Converter</span>
+               </div>
+               <div class='converterProject'>
+                 <div></div>
+                 <div>
+                    <p></p>
+                    <a href='https://apps.apple.com/us/app/coinconverter-crypto-currency/id1494639072'>
+                       <button>
+                          <span class='btnTextDownload'>
+                             Download on the
+                             <span class='btnTextApp'>App Store</span>
+                          </span>
+                       </button>
+                 </a>
+                    <br class='newLine' />
+                    <a href='https://play.google.com/store/apps/details?id=com.witplex.coinconverter'>
+                       <button>
+                          <span  class='btnTextGet'>
+                             Get it on
+                             <span  class='btnTextGoogle'>Google Play</span>
+                          </span>
+                       </button>
+                    </a>
+                 </div>
+               </div>
+            </div>
            <div class='projectsItemPlayTime'>
             <div class='projectTitlePlayTime'>
-               <img src='./images/playTime_logo.svg'/>
+               <img src='./images/playTime_logo.png'/>
                <span>Play Time</span>
             </div>
             <div class='playTimeProject'>
               <div></div>
               <div>
                  <p></p>
-                 <button></button>
+                 <a href='https://itunes.apple.com/us/app/id1461758812'>
+                  <button>
+                     <span style='color: #FFFFFF' class='btnTextDownload'>
+                        Download on the
+                        <span style='color: #FFFFFF' class='btnTextApp'>App Store</span>
+                     </span>
+                  </button>
+               </a>
                  <br class='newLine' />
-                 <button></button>
+                 <a href='https://play.google.com/store/apps/details?id=com.witplex.playtimecoloring'>
+                  <button>
+                     <span style='color: #FFFFFF' class='btnTextGet'>
+                        Get it on
+                        <span style='color: #FFFFFF' class='btnTextGoogle'>Google Play</span>
+                     </span>
+                  </button>
+               </a>
               </div>
             </div>
          </div>
-         <div class='projectsItemConverter'>
-          <div class='projectTitleConverter'>
-             <img src='./images/converter_logo.svg'/>
-             <span>Coin Converter</span>
-          </div>
-          <div class='converterProject'>
-            <div></div>
-            <div>
-               <p></p>
-               <button></button>
-               <br class='newLine' />
-               <button></button>
+         <div class='projectsItemMath'>
+            <div class='projectTitleMath'>
+               <img src='./images/math_logo.png'/>
+               <span>Math for Kids</span>
             </div>
-          </div>
-       </div>
+            <div class='mathProject'>
+              <div></div>
+              <div>
+                 <p></p>
+                 <a href='https://apps.apple.com/us/app/math-for-kids-cool-fun-games/id1570425468'>
+                   <button>
+                      <span style='color: #FFFFFF' class='btnTextDownload'>
+                         Download on the
+                         <span style='color: #FFFFFF' class='btnTextApp'>App Store</span>
+                      </span>
+                   </button>
+                </a>
+                 <br class='newLine' />
+                 <a href='https://play.google.com/store/apps/details?id=com.witplex.preschoolmathgame'>
+                   <button>
+                      <span style='color: #FFFFFF' class='btnTextGet'>
+                         Get it on
+                         <span style='color: #FFFFFF' class='btnTextGoogle'>Google Play</span>
+                      </span>
+                   </button>
+                </a>
+              </div>
+            </div>
+         </div>
        <div class='projectsItemMinerManagement'>
         <div class='projectTitleMinerManagement'>
-           <img src='./images/minerbox_logo.svg'/>
+           <img style='width:28px; height: 28px' src='./images/minerbox_logo.png'/>
            <span>MinerBox Management</span>
         </div>
         <div class='minerManagementProject'>
           <div></div>
         </div>
        </div>
-       <div class='aboutContainer'>
+       <div id='aboutContainer'>
          <div>
             <p class='aboutTitle'>About</p>
             <p class='aboutText'>
@@ -157,41 +226,43 @@
     </div>
     <div class='slidesContainer'>
        <div class='slidesWrapper'>
-          <img class='prev' src='./images/prev_button.svg' />
+          <img class='prev' src='./images/prev_button.png' />
           <div class='slides'></div>
-          <img class='next' src='./images/next_button.svg'/>
+          <img class='next' src='./images/next_button.png'/>
        </div>
 
     </div>
-    <div class='footerContainer'>
+    <div id='footerContainer'>
        <div class='footerLogo'>
-          <img src='./images/footer_logo.svg' />
+          <img style='width: 200px; height: 108px' src='./images/footer_logo.png' />
        </div>
        <div class='footer'>
           <div class='contact'>
              <div class='contactItem'>
-               <img src='./images/mail.svg' />
+               <img style='width: 26px; height: 18.17px' src='./images/mail.png' />
                <span>hello@witplex.com</span>
              </div>
              <div class='contactItem'>
-               <img src='./images/phone.svg' />
-               <span>+374  ** ** ** **</span>
+               <img style='width: 22px; height: 22px' src='./images/phone.png' />
+               <span>+374  91 46 52 45</span>
              </div>
              <div class='contactItem'>
-               <img src='./images/address.png' />
+               <img style='width: 16px; height: 22px' src='./images/address.png' />
                <span>24/15 Azatutyan Ave, Yerevan 0018</span>
              </div>
           </div>
           <div class='map'>
-            <img src='./images/map.svg' />
+            <a target='_blank' href='https://www.google.com/maps/place/24%2F15+Azatutyan+Ave,+Yerevan+0018,+Armenia/@40.2087134,44.5259401,17z/data=!3m1!4b1!4m5!3m4!1s0x406aa2cc498e45ad:0xb33342795ef83fc8!8m2!3d40.2087135!4d44.5304194'>
+               <img src='./images/map.png' />
+            </a>
          </div>
          <div class='icons'>
-            <div></div>
-            <div></div>
-            <div></div>
+            <a href='https://www.facebook.com/witplex'><div></div></a>
+            <a href='https://www.linkedin.com/company/witplex'><div></div></a>
+            <a href='https://twitter.com/plexwit'><div></div></a>
          </div>
          <div class='copyright'>
-            ©2021. Copyright by WitPlex
+            &copy2021. Copyright by WitPlex
          </div>
        </div>
    </div>
